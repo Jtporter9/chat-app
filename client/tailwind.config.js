@@ -2,7 +2,7 @@
 const plugin = require('tailwindcss/plugin');
 
 module.exports = {
-  content: ["./src/**/*.{html,js}"],
+  content: ['./src/**/*.{html,js}'],
   darkMode: 'media', // or 'class'
   theme: {
     screens: {
@@ -952,11 +952,15 @@ module.exports = {
     'disabled',
   ],
   plugins: [
-    plugin(({addBase, theme}) => {
+    plugin(({ addBase, theme }) => {
       addBase({
-        // or whichever color you'd like
-        'html': {color: theme('colors.slate.800')},
+        html: { color: theme('colors.slate.700') },
+        h1: { fontSize: theme('fontSize.4xl')},
+        h2: { fontSize: theme('fontSize.2xl')},
+        h3: { fontSize: theme('fontSize.lg')},
+        h4: { fontSize: theme('fontSize.base')},
+        h5: { fontSize: theme('fontSize.sm')},
       });
-    })
+    }),
   ],
-}
+};
