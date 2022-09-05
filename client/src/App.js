@@ -18,7 +18,7 @@ function App({ socket }) {
   };
 
   return (
-    <div className="App">
+    <div className="container mx-auto flex place-content-center">
       {!showChat ? (
         <div className="joinChatContainer">
           <h3>Join a Chat</h3>
